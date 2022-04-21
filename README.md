@@ -1,6 +1,6 @@
 # Jobify 面試管理工具
   
-#### https://github.com/cvcvbnbn13/fatty-jobify.git
+#### https://fatty-jobify.herokuapp.com/landing
 
 #### Run The App Locally
 
