@@ -1,12 +1,11 @@
 import React from 'react';
-import { FormRow, FormRowSelect } from '../index';
+import { FormRowSelect } from '../index';
 import { useAppContext } from '../../context/appContext';
 import Wrapper from '../../assets/wrappers/SearchContainer';
 
 const SearchContainer = () => {
   const {
     isLoading,
-    search,
     searchStatus,
     searchType,
     sort,

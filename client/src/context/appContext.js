@@ -50,8 +50,10 @@ const initialState = {
   company: '',
   jobLocation: userLocation || '',
   jobTypeOptions: ['正職', '實習', '兼職', '其他'],
+  // default
   jobType: '正職',
   statusOptions: ['錄取', '等待中', '未錄取', '尚未面試'],
+  // default
   status: '等待中',
   date: '',
   jobs: [],
@@ -146,6 +148,7 @@ const AppProvider = ({ children }) => {
     clearAlert();
   };
 
+  // 控制漢堡
   const toggleSidebar = () => {
     dispatch({ type: TOGGLE_SIDEBAR });
   };
@@ -328,6 +331,7 @@ const AppProvider = ({ children }) => {
 };
 
 const useAppContext = () => {
+  // useContext參數必須是Context本身
   return useContext(AppContext);
 };
 

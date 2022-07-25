@@ -7,6 +7,7 @@ const auth = async (req, res, next) => {
   if (!authHeader || !authHeader.startsWith('Bearer')) {
     throw new UnauthenticatedError('憑證無效');
   }
+  // authHeader.split(" ")[0] = 'Bearer';
   const token = authHeader.split(' ')[1];
   try {
     // createJWT在User.js裡

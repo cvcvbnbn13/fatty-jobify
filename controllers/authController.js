@@ -1,7 +1,6 @@
 import User from '../models/User.js';
 import { StatusCodes } from 'http-status-codes';
 import { BadRequestError, UnauthenticatedError } from '../errors/index.js';
-import bcrypt from 'bcryptjs';
 
 const register = async (req, res, next) => {
   const { name, password, email } = req.body;
@@ -35,13 +34,12 @@ const register = async (req, res, next) => {
 const login = async (req, res) => {
   const { email, password } = req.body;
   if (!password || !email) {
-    throw new BadRequestError('尚有資料未填寫');
+    throw new BadRequestError('尚有欄位未填寫');
   }
   const user = await User.findOne({ email }).select('+password');
   if (!user) {
     throw new UnauthenticatedError('查無此帳戶');
   }
-  console.log(user);
 
   const isPasswordCorrect = await user.passwordCompass(password);
   if (!isPasswordCorrect) {

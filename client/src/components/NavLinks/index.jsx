@@ -1,7 +1,6 @@
 import React from 'react';
 import links from '../../utills/links';
 import { NavLink } from 'react-router-dom';
-import { useAppContext } from '../../context/appContext';
 const NavLinks = ({ toggleSidebar }) => {
   return (
     <div className="nav-links">

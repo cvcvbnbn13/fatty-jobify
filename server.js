@@ -32,6 +32,9 @@ if (process.env.NODE_ENV !== 'production') {
   app.use(morgan('dev'));
 }
 
+// import.meta.url = file:///C:/Users/CJS/Desktop/jobify/server.js
+// __dirname = C:\Users\CJS\Desktop\jobify
+// dirname的目的在返回目錄(這個資料夾)的位置
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 app.use(express.static(path.resolve(__dirname, './client/build')));
@@ -69,3 +72,5 @@ const start = async () => {
 };
 
 start();
+
+console.log(__dirname);
