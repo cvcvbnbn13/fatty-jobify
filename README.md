@@ -1,6 +1,4 @@
 # Jobify 面試管理工具
-  
-#### https://fatty-jobify.herokuapp.com/landing
 
 #### Run The App Locally
 
